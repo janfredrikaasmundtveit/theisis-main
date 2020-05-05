@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[norsk,english]{babel}
+\usepackage{physics}
+\usepackage{mathpazo}
+\usepackage{amsmath,esint}
+\usepackage{MnSymbol}
+\usepackage{latexsym}
+\usepackage{wasysym}
+\usepackage{geometry}
+\usepackage{simplewick}
+\usepackage{listings}
+\usepackage{feynmp-auto}
+\usepackage{slashed}
+\usepackage{graphicx}
+\usepackage[toc,page]{appendix}
+\usepackage{float}
+\usepackage[linktocpage]{hyperref}
+\usepackage[nottoc]{tocbibind}
+\usepackage[numbers]{natbib}
+\usepackage{subcaption}
+\usepackage{subfiles}
+\title{theisis main}
+\author{jan.fredrik.aasmundtveit }
+\date{October 2019}
+\newcommand{\kga}{{\gamma^{(1)}}}
+\newcommand{\kq}{{q^{(1)}}}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+\subfile{introduction.tex}
+
+\section{Universal extra dimensions}
+\subfile{UED.tex}
+
+\section{Dark matter}
+\subfile{Darkmatter.tex}
+
+\section{Direct detection of the LKP}
+\subfile{Directdetection.tex}
+
+\section {Results}
+\subfile{Results.tex}
+
+
+\section{Discussion}
+\subfile{Discussion.tex}
+
+\appendix
+
+\section{Passarino-Veltmann reduction}
+\subfile{PVDecomp.tex}
+
+\nocite{*}
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}

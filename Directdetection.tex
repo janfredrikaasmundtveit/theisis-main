@@ -1,0 +1,371 @@
+\documentclass{article}
+\begin{document}
+
+\subsection{Effective Lagrangian}
+As both the LKP and nucleus are non-relativistic particles any operators suppressed by  the velocity of either particle can be neglected leaving the effective Lagrangian derived in \cite{1012}:
+\begin{equation}
+\mathcal{L}_q^{eff}= f_qA^{(1)\mu}A^{(1)}_\mu\bar{q}m_q+i\slashed{D}q+\frac{d_q}{M_{A^{(1)}}} \epsilon_{\mu\nu\rho\sigma}A^{(1)\mu}i\partial^\nu A^{(1)\rho}\bar{q}\gamma^\sigma \gamma^5 q+\frac{g_q}{M^2_{A^{(1)}}}i\partial^\mu A^{(1)\rho} i\partial^\nu A^{(1)}_\rho \mathcal{O}^q_{\mu\nu}
+\label{lagrangianq}
+\end{equation}
+
+\begin{equation}
+ \mathcal{L}_g^{eff}=f_gA^{(1)\mu}A^{(1)}_\mu G_{\mu\nu}^aG^{a\mu\nu}+\frac{g_G}{m_\kga^2}A^{(1)\rho}i\partial^{\mu}i\partial^\nu A^{(1)}_\rho\mathcal{O}_{\mu\nu}^{g}
+ \label{lagrangiang}
+\end{equation}
+
+where $G_{\mu\nu}^a$ is the gluon field tensor $\mathcal{O}^{g/q}_{\mu\nu}$ is the twist-2 operator defined as
+
+\begin{equation}
+    \mathcal{O}^q_{\mu\nu}=\frac{1}{2}i\bar{q}D_\mu \gamma_\nu+D_\nu \gamma_\mu-\frac{1}{2}g_{\mu\nu}\slashed{D}q
+\end{equation}
+\begin{equation}
+    \mathcal{O}_{\mu\nu}^{g}=G^{a\rho}_\mu G^{a}_{\rho\nu}+\frac{1}{4}g_{\mu\nu}G^{a\alpha\beta}G^a_{\alpha\beta}
+\end{equation}
+
+
+Scattering amplitudes are given by evaluating the effective lagrangian between the initial and final states. as the quarks and gluons that are of interest to direct detection are all in nucleon states either as a constituent of a nucleon we only care about quark and gluon opperators evaluated in nucleon states. 
+
+%someting somethig dirac eqn?
+\begin{equation}
+\bra{N}\bar{q}i\slashed{D}q\ket{N}=\bra{N}\bar{q}m_qq\ket{N}=m_N f_{Tq}
+\end{equation}
+
+\begin{equation}
+\bra{N}G_{\mu\nu}^aG^{a\mu\nu}\ket{N}=-\frac{8\pi}{9\alpha_s}m_Nf_{TG}
+\end{equation}
+
+\begin{equation}
+\bra{N}\mathcal{O}_{\mu\nu}^q\ket{N}=\frac{1}{m_N}(p_\mu p_\nu-m_n\frac{1}{4}g_{\mu\nu})(q(2)+\bar{q}(2))
+\end{equation}
+
+\begin{equation}
+\bra{N}O_{\mu\nu}^g\ket{N}=\frac{1}{m_N}(p_\mu p_\nu-m_n\frac{1}{4}g_{\mu\nu})(G(2))
+\end{equation}
+
+
+where $f_{Tq/G}$ is calculated in \cite{qcont} using lattice QCD. 
+Although the gluon-DM cross section do not receive any tree-level contribution the fact that the expression contains a factor $\frac{1}{\alpha_s}$ means the contribution from 1-loop diagrams will be of the same order as the contribution from tree-level diagrams. This is not the case for the twist-2 which can therefore be ignored. 
+
+
+G(2), q(2) and $\bar{q}(2)$ being the second moment of The parton distribution function (PDF) fferfor gluons, quarks and anti-quarks respectively. defined as
+
+    
+\begin{equation}
+    G(2)=\int_0^1dx xf_g(x)
+\end{equation}
+
+\begin{equation}
+    q(2)+\bar{q}(2)=\int_0^1dx x(f_q(x)+f_{\bar{q}}(x))
+\end{equation}
+  which can be understood as the fraction x of of the total momentum of the nucleon carried by the relevant particle. 
+
+The spidependent term is evaluated as:
+
+\begin{equation}
+   \bra{N}\bar{q}\gamma_\mu\gamma_5q\ket{N}= 2s_\mu \Delta q_N
+\end{equation}
+
+$s_\mu$ being the spin of the nucleon and $q_N$ being the spin contribution of the relevant quark obtained from \ref{sdcont}
+
+The final parameters $f_q, f_g, d_q$ and $g_g$ have to be calculated from quark/gluon-DM scattering processes. 
+
+\subsubsection{quark contribution}
+The following diagrams diagrams contribute to the quark-DM elastic cross section:
+
+\begin{figure}[H]
+\begin{fmffile}{higgstchannel}% choose something better!
+\begin{fmfgraph*}(100,100)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}$}{i2}
+\fmflabel{$\gamma^{(1)}$}{o2}
+\fmflabel{q}{i1}
+\fmflabel{q}{o1}
+\fmf{fermion}{i1,v1,o1}
+\fmf{dbl_wiggly}{i2,v2,o2}
+\fmf{dashes}{v1,v2}
+\fmfdotn{v}{2}
+\end{fmfgraph*}
+\end{fmffile}\begin{fmffile}{q1tchannel}% choose something better!
+\space\space\space\space\space\space\space\begin{fmfgraph*}(100,100)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}$}{i2}
+\fmflabel{$\gamma^{(1)}$}{o1}
+\fmflabel{q}{i1}
+\fmflabel{q}{o2}
+\fmf{fermion}{i1,v1}
+\fmf{fermion}{v2,o2}
+\fmf{dbl_wiggly}{i2,v2}
+\fmf{dbl_wiggly}{v1,o1}
+\fmf{dbl_plain}{v1,v2}
+\fmfdotn{v}{2}
+\end{fmfgraph*}
+\end{fmffile}\begin{fmffile}{q1schannel}% choose something better!
+\space\space\space\space\space\space\space\begin{fmfgraph*}(100,100)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}$}{i2}
+\fmflabel{$\gamma^{(1)}$}{o2}
+\fmflabel{q}{i1}
+\fmflabel{q}{o1}
+\fmf{fermion}{i1,v1}
+\fmf{fermion}{v2,o1}
+\fmf{dbl_wiggly}{i2,v1}
+\fmf{dbl_wiggly}{v2,o2}
+\fmf{dbl_plain}{v1,v2}
+\fmfdotn{v}{2}
+\end{fmfgraph*}
+\end{fmffile}
+\caption{figurecaption}
+\label{quarkdigrams}
+\end{figure}
+
+The Higgs exchange diagram evaluates to:
+\begin{equation}
+    \mathcal{M}^{\mu\nu}_h=-ig_{\kga\kga h}\lambda_q\frac{g^{\mu\nu}}{mh^2}\bar{q}q
+\end{equation}
+
+When computing the kk-quark exchange diagrams it is important to distinguish right and left handed quarks. 
+
+\begin{equation}
+    \mathcal{M_q}^{\mu\nu}_{R/L}=-ig_{3}^2\bar{q_{R/L}}\gamma^{\mu}\frac{\slashed{p}_{q}-\slashed{p}_{\gamma^{(1)}}+m_{q^{(1)}}}{(p_q-p_{\gamma^{(1)}})^2-m_{q^{(1)}}^2}\gamma^{\nu}+\gamma^{\nu}\frac{\slashed{p}_{\gamma^{(1)}}+\slashed{p}_{q}+m_{q^{(1)}}}{(p_{\gamma^{(1)}}+p_q)^2-m_{q^{(1)}}^2}\gamma^{\mu}q_{R/L}
+\end{equation}
+
+Focusing just on the numerator we have 4 distinct Dirac bi-linears: \begin{equation*}
+    \bar{q}P_{L/R}\gamma^{\mu}\slashed{p}\gamma^\nu P_{R/L}q=\bar{q}\gamma^{\mu}\slashed{p}\gamma^\nu P_{R/L}P_{R/L}q=\bar{q}\gamma^{\mu}\slashed{p}\gamma^\nu P_{R/L}q
+\end{equation*}
+\begin{equation*}
+  \bar{q} P_{L/R}\gamma^{\mu}\gamma^{\nu}P_{R/L}q= \bar{q} \gamma^{\mu}\gamma^{\nu}P_{L/R}P_{R/L}q =0
+\end{equation*}
+
+The other two are obtained exchange of indices. 
+this leaves the following matrix element:
+
+\begin{equation}
+    \mathcal{M}_{R/L}^{\mu\nu}=-ig_{\kga\kq q}^2(\frac{p_{q\sigma}-p_{\gamma^{(1)}\sigma}}{(p_q-p_{\gamma^{(1)}})^2-m_{q^{(1)}}^2}\bar{q}\gamma^{\mu}\gamma^\sigma\gamma^{\nu}P_{R/L}q+\frac{p_{{\gamma^{(1)}}\sigma}+p_{q\sigma}}{(p_{\gamma^{(1)}}+p_q)^2-m_{q^{(1)}}^2}\bar{q}\gamma^{\nu}\gamma^\sigma\gamma^{\mu}P_{R/L}q)
+\end{equation}
+
+This matrix element can conveniently be written as:
+\begin{equation}
+    \mathcal{M}_{qR/L}^{\mu\nu}=-ig_{\kga
+    \kq q}^2(c_\sigma(\bar{q}\gamma^{\nu}\gamma^{\sigma}\gamma^{\mu}+\gamma^{\mu}\gamma^{\sigma}\gamma^{\nu}q)+d_\sigma(\bar{q}\gamma^{\nu}\gamma^{\sigma}\gamma^{\mu}-\gamma^{\mu}\gamma^{\sigma}\gamma^{\nu}q))
+    \label{decomp}
+\end{equation}
+
+This decomposition is convnient as the first term is spinindependent and the second term contains all the spin-dependence. Setting all spacelike components to 0 with the exception of vectors contracted with a gamma matrix and keeping only linear terms in the quarkmass. The coefficients become:
+
+\begin{equation}
+    c^\sigma=-\frac{(m_{\gamma^{(1)}}^2-{m_{q^{(1)}}}^2)p_q^\sigma+2m_qm_{\gamma^{(1)}}p^\sigma_{\gamma^{(1)}}}{(m_{\gamma^{(1)}}{}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}{}^2)(m_{\gamma^{(1)}}{}^2-2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}{}^2)}
+\end{equation}
+
+\begin{equation}
+    d^\sigma=-\frac{(m_{\gamma^{(1)}}^2-m_{q^{(1)}}^2)p_{\gamma^{(1)}}^\sigma+2m_qm_{\gamma^{(1)}}p_q^\sigma}{({m_{\gamma^{(1)}}}^2-2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)}
+\end{equation}
+
+Using basic Dirac algebra we can rewrite the bilinear in first term in (\ref{decomp}) as: 
+
+\begin{equation}
+    \bar{q}\gamma^\nu\gamma^\sigma\gamma^\mu q+ (\mu\leftrightarrow\nu) =2\bar{q}(g^{\mu\sigma}\gamma^{\nu}+g^{\nu\sigma}\gamma^\mu-g^{\mu\nu}\gamma^\sigma)q
+\end{equation}
+
+Looking at the index structure of $c_\sigma$ the we should look at the contraction:
+\begin{equation}
+    p_{q\sigma}2\bar{q}(g^{\mu\sigma}\gamma^{\nu}+g^{\nu\sigma}\gamma^\mu-g^{\mu\nu}\gamma^\sigma)q=2\bar{q}(p_q^{\mu}\gamma^{\nu}+p_q^{\nu}\gamma^\mu-g^{\mu\nu}\slashed{p_q})q=4\Tilde{\mathcal{O}}^{q\mu\nu}-g^{\mu\nu}\bar{q}\slashed{p_q}q
+\end{equation}
+
+
+
+\begin{equation}
+    p_{\gamma^{(1)}\sigma}2\bar{q}(g^{\mu\sigma}\gamma^{\nu}+g^{\nu\sigma}\gamma^\mu-g^{\mu\nu}\gamma^\sigma)q=2\bar{q}(p_{\gamma^{(1)}}^{\mu}\gamma^{\nu}+p_{\gamma^{(1)}}^{\nu}\gamma^{\mu}-g^{\mu\nu}\slashed{p}_{\gamma^{(1)}})q
+\end{equation}
+
+
+The terms proportional to $p_{\gamma^{(1)}}^{\mu}$ and $p_{\gamma^{(1)}}^{\nu}$ can be droped as $\epsilon_\mu(p_{\gamma^{(1)}})p_{\gamma^{(1)}}^{\mu}=0$.
+*Taking the non-relativistic limit by fixing $p_{{\gamma^{(1)}}\mu}=(m_{\gamma^{(1)}},\textbf{0})$ and using the fact that
+$\bar{q}\slashed{p_q}q=m_q\bar{q}q$ by the Dirac equation we get the scalar contribution to the martix element 
+\begin{equation}
+    \mathcal{M}_{sq}^{\mu\nu}=\mathcal{M}_{sqR}^{\mu\nu}+\mathcal{M}_{sqR}^{\mu\nu}+\mathcal{M}_{h}^{\mu\nu}=-ig_{\kga\kq q}{}^2\frac{4(m_\kga{}^2-m_\kq{}^2)\mathcal{O}^{q\mu\nu}+m_q(m_\kq{}{}^2-m_\kga{}^2+4m_\kga{}^2)\bar{q}q}{(m_{\kga}{}^2-2m_qm_\kga-m_\kq{}^2)(m_\kga{}^2+2m_qm_\kga-m_\kq{}^2)}-ig_{\kga\kga h}\lambda_q\frac{g^{\mu\nu}}{mh^2}\bar{q}q
+\end{equation}
+We have therefore determined 2 of the nessecary coefficients:
+
+\begin{equation*}
+    g_q=g_{\kga\kq q}^2\frac{4(m_\kga^2-m_\kq^2)}{(m_{\gamma^{(1)}}^2-2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)}
+\end{equation*}
+and 
+
+\begin{equation*}
+    f_q=g_{\kga\kq q}^2\frac{(3m_\kga^2+m_\kq^2)}{(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)}+\frac{\lambda_qg_{\kga\kga h}}{m_qm_h^2}
+\end{equation*}
+
+
+
+
+for the second term in (\ref{decomp}) we use the chisholm identity to write the matrix elemant as:
+\begin{equation*}
+   \mathcal{M}_{spin}^{\mu\nu} =d_\sigma\bar{q}\gamma^\nu \gamma^\sigma \gamma^\mu-\gamma^\mu \gamma^\sigma \gamma^\nu q=d_\sigma\bar{q}2i\epsilon^{\mu\nu\sigma\rho}\gamma^5\gamma_\rho q
+\end{equation*}
+which allows us to recognize the coefficient the coefficent $d_q$ which in the nonrelativistic limit is: 
+\begin{equation*}
+ d_q=-ig_{\kga\kq q}^2\frac{m_{\gamma^{(1)}}(m_\kga^2-m_\kq^2)}{(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)(m_{\gamma^{(1)}}^2+2m_qm_{\gamma^{(1)}}-m_{q^{(1)}}^2)}
+\end{equation*}
+
+
+\subsubsection{gluon contribution}
+\begin{figure}[H]
+\begin{fmffile}{ggammatriangle}% choose something better!
+\begin{fmfgraph*}(80,80)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}_\mu$}{i2}
+\fmflabel{$\gamma^{(1)}_\nu$}{o2}
+\fmflabel{$g_\rho$}{i1}
+\fmflabel{$g_\sigma$}{o1}
+\fmf{gluon}{i1,v3}
+\fmf{gluon}{v4,o1}
+\fmf{dbl_wiggly}{i2,v1}
+\fmf{dbl_wiggly}{v1,o2}
+\fmf{scalar}{v1,v2}
+\fmf{fermion}{v3,v2}
+\fmf{fermion}{v4,v3}
+\fmf{fermion}{v2,v4}
+\fmfdotn{v}{4}
+\end{fmfgraph*}
+\end{fmffile}
+ \space\space\space\space\space\space\begin{fmffile}{ggammasqure}% choose something better!
+\begin{fmfgraph*}(80,80)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}_\mu$}{i2}
+\fmflabel{$\gamma^{(1)}_\nu$}{o2}
+\fmflabel{$g_\rho$}{i1}
+\fmflabel{$g_\sigma$}{o1}
+\fmf{gluon}{i1,v3}
+\fmf{gluon}{v4,o1}
+\fmf{dbl_wiggly}{i2,v1}
+\fmf{dbl_wiggly}{v2,o2}
+\fmf{dbl_plain_arrow}{v1,v2}
+\fmf{fermion}{v2,v4}
+\fmf{fermion}{v3,v1}
+\fmf{fermion}{v4,v3}
+\fmfdotn{v}{4}
+\end{fmfgraph*}
+\end{fmffile}
+ \space\space\space\space\space\space\begin{fmffile}{ggammasqure2}% choose something better!
+\begin{fmfgraph*}(80,80)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}_\mu$}{i2}
+\fmflabel{$\gamma^{(1)}_\nu$}{o2}
+\fmflabel{$g_\rho$}{i1}
+\fmflabel{$g_\sigma$}{o1}
+\fmf{gluon}{i1,v3}
+\fmf{gluon}{v4,o1}
+\fmf{dbl_wiggly}{i2,v1}
+\fmf{dbl_wiggly}{v2,o2}
+\fmf{fermion}{v1,v2}
+\fmf{dbl_plain_arrow}{v2,v4}
+\fmf{dbl_plain_arrow}{v3,v1}
+\fmf{dbl_plain_arrow}{v4,v3}
+\fmfdotn{v}{4}
+\end{fmfgraph*}
+\end{fmffile} \space\space\space\space\space\space\begin{fmffile}{ggammasqure3}% choose something better!
+\begin{fmfgraph*}(80,80)
+\fmfleft{i1,i2}
+\fmfright{o1,o2}
+\fmflabel{$\gamma^{(1)}_\mu$}{i2}
+\fmflabel{$\gamma^{(1)}_\nu$}{o2}
+\fmflabel{$g_\rho$}{i1}
+\fmflabel{$g_\sigma$}{o1}
+\fmf{gluon}{i1,v3}
+\fmf{dbl_wiggly}{v4,o1}
+\fmf{dbl_wiggly}{i2,v1}
+\fmf{gluon}{v2,o2}
+\fmf{dbl_plain_arrow}{v1,v2}
+\fmf{dbl_plain_arrow}{v2,v4}
+\fmf{fermion}{v3,v1}
+\fmf{fermion}{v4,v3}
+\fmfdotn{v}{4}
+\end{fmfgraph*}
+\end{fmffile}
+    \caption{}
+  \label{fig:my_label}
+\end{figure}
+The first diagram is suppressed as the higgs-kkphoton-kkphoton coupling is proportonal to the elctroweak scale which is significantly smaller than any compactification scale of interest.
+
+
+In \cite{tbboxdiagrams} the annihilation crosssection of two kk-hypercharge bosons to photons was calculated using box-diagrams similar to the ones needed here. This was done by Writing the matrix element as:
+\begin{equation}
+       \mathcal{M}_3^{\mu\nu\sigma\rho}=-i\alpha_{s}\frac{2}{9}(g_v^2\mathcal{M}^{\mu\nu\sigma\rho}_v+g_a^2\mathcal{M}^{\mu\nu\sigma\rho}_a)
+\end{equation}
+The polarization tensor $\mathcal{M}^{\mu\nu\sigma\rho}_v$ ($\mathcal{M}^{\mu\nu\sigma\rho}_a$ ) is the vector (axial-vector) contribution which depends external momenta and masses, $g_v$($g_a$) is the (axial-) vector coupling i.e. the coeffient of $\gamma^\mu$ ($\gamma^\mu \gamma^5$) in the KK-quark, SM-quark, KK-photon vertex.
+
+
+Specifically the coupling for a doublet quark is:
+
+\begin{equation*}
+    g_{\kga\kq_d q}=(T_3g\cos\alpha^1s_w+Y_dg_y\cos\alpha^1c_w)\frac{1}{2}(1-\gamma^5)+c_wY_sg_y\sin\alpha\frac{1}{2}(1+\gamma^5)
+\end{equation*}
+
+\begin{equation*}
+    =(T_3g\cos\alpha^1s_w+Y_dg_y\cos\alpha^1c_w)+c_wY_sg_y\sin\alpha\frac{1}{2}+(-T_3g\cos\alpha^1s_w-Y_dg_y\cos\alpha^1c_w+c_wY_sg_y\sin\alpha)\gamma^5=g_v+g_a\gamma^5
+\end{equation*}
+
+For a singlet quark exchange $\sin(\alpha^1)$ and $\cos(\alpha^1)$, and chnage the overall sign.
+
+Both the kk-photons and gluons polarization vectors satisfy the condition $\epsilon_\mu(p_g) p_g^\mu=\epsilon_\mu(p_\kga) p_\kga^\mu=0$.In addition the gluons being mass less are also transverse in space $\epsilon_i(p_g) p_g^i=0$. 
+Combining the two conditions for gluon polarization vectors $\epsilon_\mu(p_g) p_g^\mu=\epsilon_0(p_g) p_g^0+\epsilon_i(p_g) p_g^i=\epsilon_0(p_g) p_g^0=0$ We see that $\epsilon_0(p_g)=0$. In the non-relativistic limit $p_\kga=(m_\kga,\textbf{0})$ we therefore have an the condition: $\epsilon_\mu(p_g)p_\kga^\mu=0$ this means any term with a free index carried by a kk-photon momentum will not contribute to the scattering amplitude. This means we can decompse the lorentz-structure of the polarization  tensor as:
+
+\begin{equation*}
+    \mathcal{M}^{\mu\nu\sigma\rho}_{v/a}=-\frac{B_{6{v/a}}}{m_\kga^2}p_g^\mu p_g^\nu g^{\sigma\rho}+C_{1{v/a}} g^{\mu\nu}g^{\sigma\rho}+C_{2{v/a}}g^{\mu\sigma}g^{\nu\rho}+C_{3{v/a}}g^{\mu\rho}g^{\nu\sigma} 
+\end{equation*}
+
+Where the coefficients $B_6,C_n$ are  to be calculated from the diagrams, The names are chosen in analogy to \cite{tbboxdiagrams}. The minus sign  is due to exchanging an outgoing momentum for an incoming one, so that all momenta can be considered as incoming when computing the diagrams. 
+
+The full matrix element for gluon-DM scattering is given by summing the vector and axial vector contributions:
+
+\begin{equation}
+    \mathcal{M}^{\mu\nu\sigma\rho}_{a/v}=-i\alpha_{s}\frac{2}{9}(g_{v/a}^2)(-\frac{B_{6{v/a}}}{m_\kga^2}p_g^\mu p_g^\nu g^{\sigma\rho}+C_{1{v/a}} g^{\mu\nu}g^{\sigma\rho}+C_{2{v/a}}g^{\mu\sigma}g^{\nu\rho}+C_{3{v/a}}g^{\mu\rho}g^{\nu\sigma} )
+\end{equation}
+
+
+\begin{equation}
+  \mathcal{M}_s^{\mu\nu\sigma\rho}=-i\alpha_{s}g_v^2(-\frac{B_6}{m_\kga^2} \Tilde{\mathcal{O}}^{q\mu\nu}g^{\rho\sigma}+(C_{1v}-\frac{B_{6v}m_N^2}{4m_\kga^2})g^{\mu\nu}g^{\rho\sigma})+(v->a)
+\end{equation}
+
+We can the read of the relevant effective coupling:
+
+\begin{equation}
+    f_gm_\kga^2=\alpha_s(g_v^2C_{1v}-\frac{B_{6v}m_N^2}{4m_\kga^2}+g_a^2(C_{1a}-\frac{B_{6a}m_N^2}{4m_\kga^2})
+\end{equation}
+
+The coeffeients $B_6$ an $ C_ {1a/v}$ were calculated using the Passarino-Veltmann \cite{PV} Reduction scheme by making slight modifications to the program used in \cite{tbboxdiagrams}. 
+The SI DM-nucleon coupling is then:
+
+\begin{equation}
+    \frac{f_N}{m_N}=\sum_{q=u,d,s}f_qf_{T_q}+\sum_{q=u,d,s,c,b}\frac{3}{4}g_q(q(2)+\bar{q}(2))-\frac{8\pi}{9\alpha_s}f_Gf_{T_G}
+    \label{effcoup}
+\end{equation}
+
+and the SD coupling 
+\begin{equation}
+    a_N=\sum_{q=u,d,s}d_q\Delta q_N
+\end{equation}
+
+We can now express the full spin independent nucleus- DM elastic cross section as:
+\begin{equation}
+    \sigma_{SI}=\frac{1}{\pi}(\frac{M}{m_\kga+M})^2(Zf_p+(A-Z)f_n)^2
+\end{equation}
+M being the nucleus mass, Z the atomic number and A the total nucleon number. 
+
+and the spin dependent cross section:
+\begin{equation}
+     \sigma_{SD}=\frac{1}{\pi}(\frac{M}{m_\kga+M})^2\frac{8}{3}\frac{(J+1)}{J}(\expectationvalue{S_p}a_p+\expectationvalue{S_n}a_n)^2
+\end{equation}
+
+$\expectationvalue{S_N}=\bra{A}S_N\ket{A}$ being the expexctaionvalue of total spin of the relevant nucleon in the nucleus, and J the spin of the nucleus. 
+
+\subsection{DarkSUSY}
+
+
+\end{document}

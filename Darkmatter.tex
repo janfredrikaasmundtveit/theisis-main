@@ -1,0 +1,124 @@
+\documentclass{article}
+\begin{document}
+
+
+\subsection{Experimental evidence for Dark Matter} 
+
+\subsubsection*{Rotation curves} 
+According to Newtonian mechanics a star at distance r from the center of the galaxy should be orbiting at with a velocity $v(r)=\sqrt{\frac{GM(r)}{r}}$ where M(r) is the mass enclosed by the orbit. 
+ In 1970 \cite{rubin1970rotation} Rubin and Ford found the velocities of stars in the Andromeda galaxy to be constant for large r which suggests that the mass density of the galaxy scales as $\rho(r)\propto r^{-2}$. Luminous matter however scales as $\rho(r)\propto r^{-3.5}$ suggesting that there must be DM present. Similar measurements of other galaxies have also suggested dark matter exists.
+ 
+\subsubsection*{Structure formation} 
+ Dark matter is also needed to explain the formation of large scale structures. These structures were formed from density perturbations in the early universe, regions with slight over-densities would attract more matter gravitationally causing the over-density to grow. This effect would be counteracted by radiation  and the expansion of the universe. DM however is not affected by radiation and thus would only have to overcome the expansion of the universe for over-densities to grow. 
+ 
+\subsubsection*{Gravitational lensing} 
+One of the consequences of general relativity is that light is deflected by the gravitational field, the deflection angle is larger in stronger fields. In order to explain the impact galaxies and clusters have on lensing DM must be introduced.
+
+
+
+\subsection{Constraints on DM}
+The most common solution to the dark matter problem is to attribute the extra matter density to some undiscovered particles which interacts gravitationally and possibly weakly with other particle
+If a particle is to solve the dark matter. 
+
+Any such particle must predict the correct density of dark matter referred to as the relic density and explain why this particle is not yet detected by LHC searches or direct/indirect detection experiments. Indirect detection experiments look for possible products of DM-DM annihilation whereas direct detection look for scattering events of atomic nuclei. 
+
+The DM particle is expected to be stable, non-relativistic, non-baryonic and dark.
+The particle has to be stable, or at least have a lifetime comparable to the age of the universe as it must still be present. Simulations of structure formation suggest that DM must be non-relativistic particles in order to explain the existence of large scale structures such as galaxies and clusters. The Planck collaborations \cite{planckresults} found that less than 5\%  of the energy of the universe consists of baryonic matter, however dark matter makes up around 30\% of the energy density, therefore most dark matter must be non-baryonic. Astronomicaly dark means it is electrically neutral, i.e. it does not interact with any kind of radiation as this would be detectable. 
+
+
+\subsubsection{Relic density}
+The most precise measurements of the energy content of the universe were done by the Planck collaboration \cite{planckresults} which gives a densitity of $\Omega_{CDM} h^2\approx 0.120 \pm 0.001$.
+
+ In the early universe DM and SM particles existed in thermal equilibrium. However as the universe cooled the expansion rate became significantly larger than the interaction rate and the DM density became approximately constant in the comoving frame. This is referred to as a thermal freeze-out. 
+
+The time evolution of the  number density n of DM or any other particle is given by the Boltzmann equation:
+\begin{equation}
+    \frac{dn}{dt}+3Hn=-\expectationvalue{\sigma v}(n^2-n^2_{eq})
+\end{equation}
+
+Where the term involving the Hubble parameter H accounts for dilution due to the expansion of the universe.   $\expectationvalue{\sigma v}$ denotes the thermal average over the annihilation cross section times the relative velocities of the particles.  For a non-relativistic particle the equilibrium density is given by the Maxwell-Boltzmann distribution:
+\begin{equation}
+    n_{eq}=g(\frac{mT}{2\pi})^{\frac{3}{2}} e^{-\frac{m}{T}}
+\end{equation}
+
+If there does not exist any other particles with a mass close to the DM candidate a good estimate for the relic density today is given by:
+
+\begin{equation}
+    \Omega_{CDM} h^2 \sim \frac{3\cdot 10^{-27}cm^3s^{-1}}{\expectationvalue{\sigma v}}
+    \label{approxrd}
+\end{equation}
+
+Where h is the Hubble constant in units of 100 $km s^{-1} Mpc^{-1} \ $. If however the DM candidate is accompanied by other particles with a similar mass, like for example in UED, one has to consider the effect of co-annihilations, which may give large corrections to \ref{approxrd}. A more detailed look at the relic density calculation as-well as the relic density of The LKP is given in \cite{jacobsen2019relic}. 
+
+\subsubsection{Direct detection}
+Direct detection experiments attempt to probe dark matter (DM) by looking for scattering events of atomic nuclei. If Dark Matter does indeed consist of WIMPs one would expect some non-zero, although usually small, cross section with nucleons and by extension atomic nuclei. Therefore by a large sufficiently isolated container filled with atomic nuclei will only interact with DM and will either detect the DM or place an upper bound on the nucleon-DM cross section. The best current bounds come from the XENON1T experiment which utilized a ton scale tank of liquid xenon \cite{ddexperiment} which gives an upper bound on the spin-independent DM-nucleon elastix cross section at $10^{-45} \text{cm}^2$ for DM masses at TeV scales. The Spin dependent cross sections however has an upper bound of  $2\cdot10^{-38} \text{cm}^2$ at the same DM mass scales \cite{sdbound}.
+
+The event rate per unit detector mass is given by
+
+\begin{equation}
+\frac{dR}{d|\textbf{q}|^2}=\frac{\rho}{m_Nm_{\chi}}\int_{v_{min}}^\infty\frac{d\sigma}{d|\textbf{q}|^2}vf(v)dv
+\label{rate}
+\end{equation}
+
+$\rho$ being the DM massdensity, v is the relative velocity of the nucleon and DM particle, f(v) is the velocity distribution of DM relative to the detector, $q^\mu$ the transferred momentum which is related to the recoil energy of the nucleus by $E_r=|\textbf{q}|^2/2m_N$ meaning that \ref{rate} can be rewritten as:
+
+\begin{equation}
+\frac{dR}{dE_r}=\frac{\rho}{m_{\chi}}\frac{d\sigma}{d|\textbf{q}|^2}
+\end{equation}  
+     
+The cross section gets contributions from both spin-dependent and spin-independent interactions so the total cross section is given by 
+\begin{equation}
+   \frac{d\sigma}{d|\textbf{q}|^2}=\left(\frac{d\sigma}{d|\textbf{q}|^2}\right)_{SD}+\left(\frac{d\sigma}{d|\textbf{q}|^2}\right)_{SI}
+\end{equation}
+     
+The spin (in)dependent cross section is given by:
+ 
+\begin{equation}
+\left(\frac{d\sigma}{d|\textbf{q}|^2}\right)_{SI/SD}=\frac{\sigma_0^{SI/SD}}{4\mu^2 v^2}F^2(|\textbf{q}|^2)
+\end{equation}     
+$\mu=\frac{m_{\chi}m_N}{m_{\chi}+m_N}$ being the reduced mass of the DM nucleus system and $F^2(|\textbf{q}|)$ being the form factor which can be understood as the Fourier transform of the nuclear density distribution.
+
+$\sigma_0$ is the cross section evaluated at q=0 which has to be understood by the the fundamental interatction between DM and quarks and gluons. 
+
+In order to calculate rates for different nuclei it is convenient to derive the effective four-point coupling constants for the proton-proton-DM-DM vertex and neutron-neutron-DM-DM vertex. 
+
+These couplings are defined by constructing an effective Lagrangian consisting of all possible terms involving two DM-fields and two quarks/gluons. The full set of non-relativistic operators is given in \cite{fitzpatrick2013effective}. The terms that depend on the velocities involved are subdominant and as such will not be considered here. 
+
+
+\begin{figure}[H]
+\begin{fmffile}{effectivecouplingd}% choose something better!
+\begin{fmfgraph*}(100,100)
+\fmfleft{i1,l1,l2,i2}
+\fmfright{o1,r1,r2,o2}
+\fmfbottom{f1,b1,b2,f2}
+\fmflabel{$\chi$}{i2}
+\fmflabel{$\chi$}{o2}
+\fmflabel{SM}{i1}
+\fmflabel{SM}{o1}
+\fmfblob{.15w}{v1}
+\fmf{fermion}{i1,v1,o1}
+\fmf{fermion}{i2,v1,o2}
+\fmf{fermion,label=\rotatebox{90}{Collider experiments},side=left}{l1,l2}
+\fmf{fermion, label=\rotatebox{90}{indirect detection},side=right}{r2,r1}
+\fmf{fermion,label=Direct detection}{b1,b2}
+%\fmfdotn{v}{1}
+\end{fmfgraph*}
+\end{fmffile}
+\end{figure}
+
+\subsection{Weakly interacting massive particles}
+
+One of the most promising candidates for dark matter are weakliy interacting massive particles (WIMPs). These are particles with mass 100 GeV-$\mathcal{O}(TeV)$ which appear in many extensions to the SM.
+
+As the name suggests WIMPs interact weakly and one would therefore to first approximation expect they are not excluded by direct detection experiments.
+
+The annihilation cross section of a WIMP can be estimated as $\sigma v\sim \frac{g^4}{m^2}$, one can the use \ref{approxrd} to estimate what mass gives the right relic density which turns out to be in the range 100 GeV-$\mathcal{O}(TeV)$ which is already the natural mass range for WIMPs. 
+
+
+The lightest KK-particle, the LKP, is one example of a WIMP, based on current collider bounds it has a mass larger than 1.4 TeV, which is in the appropriate range. 
+ 
+Conservation of KK-parity ensures that the LKP is stable as the decay product of  any mode with n=1 will contain some KK-particle. Thus all KK-particles with an odd KK-numberwill decay to the LKP. Ignoring radiative corrections it is clear that the KK-photon is the LKP, and in mUED this is still true after including radiarve corrections \cite{freitas2018radiative}.  The KK-photon is a good DM-candidate as it is electrically neutral, non-baryonic, stable and  non-relativistic. 
+
+
+
+\end{document}

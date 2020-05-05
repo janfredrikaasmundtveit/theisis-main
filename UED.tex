@@ -1,0 +1,333 @@
+\documentclass{article}
+\begin{document}
+The idea of including one or more extra dimension (ED) in addition to the three spacial and one temporal we are used to was first studied in the early 20-th century by Nordström, Kaluza and Klein, in an attempt to unify gravity and electromagnetism. The fact no ED has been detected tells us they must be so small the energies associated with them are too large to be detected by current experiments, the latest LHC bound is at $R^{-1}> 1.4\text{ TeV}$.  
+
+
+\subsection{Kaluza-Klein theory}
+In 1921 Kaluza \cite{kaluza} proposed a purely classical 5 Dimensional version of Einstein's theory of general relativity. The 5D metric:
+\begin{equation}
+    g_{MN}=\begin{pmatrix}
+    g_{\mu\nu}+\phi^2A_\mu A_\nu & \phi^2A_\mu \\ 
+    \phi^2A_\nu &\phi^2
+    \end{pmatrix}
+\end{equation}
+contains the 4D metric $g_{\mu\nu}$ as well as a 4-vector $A_\mu$, which can be associated with the electromagnetic vector-potential and a scalar $\phi$. The 5D versions of Einstein's equations does with this identification reduce to the 4D Einstein's equations and Maxwell's equation and an equation for the scalar field $\phi$. Kaluza also introduced what he called the "cylinder condition": all derivatives of the 5D metric with respect to the 5th coordinate can be neglected.    
+
+In 1926 Klein suggested compactification on as an explanation for the cylinder condition \cite{klein}. 
+The idea of compactification on a circle $\mathbf{S}^1$ can be realized by making the 5th dimesion closed and periodic.
+  
+While Klein explored these ideas before Quantum Field Theory (QFT) we will here explore the most imporant consiquences of this idea in a QFT setting. 
+
+We therefore take the 5th dimension to be compactified on a scale R:
+\begin{equation}
+    y\sim y+2\pi R
+    \label{s1}
+\end{equation}
+This gives every field periodic boundary conditions allowing the Fourier decomposition in the y-direction. 
+\begin{equation}
+    \phi(x,y)=\frac{1}{\sqrt{2\pi R}}\sum_n \phi^{(n)}(x)e^{-i\frac{n}{R}y}
+\end{equation}
+
+The 5D field $\phi$ satisfies the 5D Klein-Gordon (K-G) equation in flat space-time: 
+  
+\begin{equation}
+    (\Box^{(5)}+m^2)\phi=(\Box^{(4)}-\partial_y^2+m^2)\sum_n \phi^{(n)}(x)e^{-i\frac{n}{R}y}=0
+\end{equation} 
+ This gives the condition on the Fourier components $\phi^{(n)}(x)$ 
+ \begin{equation}
+   (\Box^{(4)}+(\frac{n}{R})^2+m^2) \phi^{(n)}(x)=0
+\end{equation} 
+That is the Fourier components satisfies the K-G equation in 4D with a mass $m_n^2=m^2+\frac{n^2}{R^2}$. Therefore a particle propagating in 5D with mass m is equivalent to an infinite "tower" of particles with mass $m_n$ in the effective 4D theory. 
+
+A similar treatment of fermionic fields gives a tower of particles with mass $m_n=m+\frac{n}{R}$ 
+
+The appearance of this tower of massive states can also be understood qualitatively as follows. A particle propagating in 5D will have a  "5-momentum" $p^M$ which consist of the 4-momentum in the 4 "regular" dimensions $p^\mu$ and the momentum in the fifth dimension $p^y$. From the perspective of the effective 4D theory we do not see this momentum $p^y$ however it's contribution to the (kinetic) energy of the particle is simply understood as a mass.
+
+If the y-direction is translationally invariant, that is a coordinate transformation along the y-direction does not affect the physics, we know from Noether's theorem that the momentum in the y-direction should be conserved which in the 4D theory means the KK-number n is conserved.
+
+
+
+\subsection{Orbifold compactification}
+The simplest approach to a compactified UED-theory, described in the previous section has two major problem.
+The first problem being that it predicts additional massless scalar degrees of freedom which, have not been observed experimentally, as the 5th component of the 5D vectorfields transform as scalars under 4D Lorentz transformations. 
+The second problem is that chiral fermions can not exist in an odd number of dimensions.  
+
+One solution to both problems is to compactify on an orbifold ($\mathbb{S}^1/\mathbb{Z}_2$) instead of a circle. Which has a mirror-symmetry under orbifold projection $y\rightarrow -y$ which together with Eq.(\ref{s1}) gives a total symmetry:
+\begin{equation}
+    y\sim 2\pi R-y
+\end{equation}
+
+
+Under orbifold projections fields transform either even $P_{\mathbb{Z}_2}\phi(x,y)=\phi(x,-y)$ or odd $P_{\mathbb{Z}_2}\phi(x,y)=-\phi(x,-y)$ with their respective Fourier decompositions:
+\begin{equation}
+    \phi_{even}(x,y)=\frac{1}{\sqrt{2\pi R}}\phi_{even}^{(0)}(x)+\frac{1}{\sqrt{\pi R}}\sum_n\phi_{even}^{(n)}(x)\cos(\frac{ny}{R})
+    \label{expeven}
+\end{equation}
+
+\begin{equation}
+    \phi_{odd}(x,y)=\frac{1}{\sqrt{\pi R}}\sum_n\phi_{odd}^{(n)}(x)\sin(\frac{ny}{R})
+    \label{expodd}
+\end{equation}
+
+As only even fields have zero-modes we can get rid of the additional light scalars by assigning them odd orbifold transformations. 
+
+This compactification scheme does not fully preserve The 5D Lorentz symmetry in the y-direction, however there is still a symmetry under translations by $\pi R$  which give rise to the conserved quantity KK-parity given by $(-1)^n$ where n is the KK-number. This follows from the Fourier expansion as:
+\begin{equation}
+    \cos(\frac{n(y+\pi R)}{R})=(-1)^n \cos(\frac{ny}{R})
+\end{equation}
+\begin{equation}
+    \sin(\frac{n(y+\pi R)}{R})=(-1)^n \sin(\frac{ny}{R})
+\end{equation}
+As a result the Lightest KK-particle (LKP), that is the lightest paricle with $n=1$, is stable.   
+
+\subsection{The standard model in 5D}
+
+As in the SM the Lagrangian, before electro-weak symmetry breaking, can be constructed by adding all terms allow by Lorentz invariance and local gauge invariance under the SM gauge group. 
+\begin{equation}
+    G_{SM}=SU(3)\cross SU(2)_L\cross U(1)_Y
+\end{equation}
+
+As the Lagrangian is a local function only sensitive to the local geometry, not the topology the only difference between the 4D standard model and the standard model in our UED scenario is the number of (space-like) coordinates. We can therefore stat the Lagrangian:
+
+\begin{equation}
+    \hat{\mathcal{L}}=-\frac{1}{4}F^r_{MN}F^{rMN}+i\Bar{\psi}\slashed{D}\psi+\psi_i\lambda_{ij}\psi_j+h.c.+\abs{D_M\phi}^2-V(\phi)
+\end{equation}
+
+In order to preserve gauge invariance uner $G_{SM}$ we need to introduce the covariant derivative:
+\begin{equation}
+    D_M=\partial_M-i\hat{g}_sG^a_Mt^a-i\hat{g}A_M^b\frac{\sigma}{2}^b-iY\hat{g}_YB_M
+\end{equation}
+
+In order to study the low energy regime of a UED-theory it is convienent to express it as an effective 4D theory. This is done by integrating out the 5th dimension with the help of the expansions \ref{expeven}, \ref{expodd} and then identifying the zero-modes as the SM fields. One finds the effective 4D gauge couplings, ie the ones we measure, related to the 5D ones by:
+
+\begin{equation}
+    g=\frac{\hat{g}}{\sqrt{2\pi R}}
+\end{equation}
+
+As the 4D couplings are dimensionless, the 5D coupling have mass dimension $-\frac{1}{2}$, hence the theory is non-renormalizable and should be considered  as an effective theory only valid up to some cutoff $\Lambda$.
+
+\subsection{Radiative corrections}
+short explanation of radiative correction introducing
+
+As the mass contribution originating from compactification $\frac{n}{R}$ is significantly larger than any electroweak mass all KK-modes will be approximately degenerate, with the exception of the top-quark. Radiative mass corrections helps lifting this degeneracy and are therefore phenomenologically important. 
+
+
+in UED mass corrections to the compactification mass term can be split into two contributions: bulk corrections and boundary corrections. 
+
+
+The compactification on $\mathbf{S}^1$  does not break Lorentz invariance locally, but globally which gives rise to bulk corrections.  These corrections are due to diagrams with an internal loop winding around the extra dimension, the corrections are finite and well defined as the loops can not be smaller than the extra dimension. The most straight forward way of isolating these correction is by subtracting the (formally infinite) diagram in the uncompactified theory from the equivalent diagram in the compactified theory\cite{freitas2018radiative}. 
+
+
+Boundary corrections are a consequence of orbifolding, as translational invariance is broken at the boundary of the orbifold which introduces new terms in the Lagrangian localized at the boundary. 
+These corrections are log divergent which are usually dealt with by the self-consistent assumption that $\Lambda$ is not too large.  
+
+In the minimal UED (mUED) theory these corrections are assumed to be negligible.  
+In 2018 Freitas, Kong and Wiegand published an article \cite{freitas2018radiative} where the full corrections were commuted. Before this only terms proportional to $\ln(\Lambda R)$ were computed \cite{oldcorrections}. As $\Lambda R$ is typically assumed to be in the range 20-50 the logarithms are small enough that non-logarithmic contributions may be  significant.  
+
+\subsection{Gauge fields}
+As the only gauge boson that appears in the direct detection calculations is photon the following section will mostly focus on massless U(1) fields, although the same procedure is would be used for other gauge field as well the only difference being in the definition of the field-strength tensor. 
+As the gauge fields of the standard model all have small masses compared to the first 4 components $A_\mu$ need to have zero-modes, hence they must transform even. It then follows from gauge invarinace:
+\begin{equation}
+    A_\mu(x,y)=A_\mu(x,-y)\sim A_\mu(x,y)+\partial_\mu\theta(x,y)
+\end{equation}
+That the gaugefunctions $\theta$ must transform even, thus $\partial_y\theta(x,y)$ transforms odd which means  $A_5$ must transform odd, which is also needed as the zero mode of $A_5$ transforms as a scalar under 4D Lorentz transformations and thus would appear as a light scalar, which is not observed.  
+
+The 5D Lagrangian for a gauge-field reads:
+\begin{equation}
+       \hat{\mathcal{L}}_{guage}=-\frac{1}{4}F_{MN}F^{MN}
+\end{equation}
+with field strength tensors:
+\begin{equation}
+    F_{MN}=\partial_M A_N-\partial_NA_M
+\end{equation}
+
+In order to get the 4D theory we need to integrate out the internal degree of freedom. This can be easily done by insering the expansion:
+\begin{equation*}
+    A_\mu(x,y)=\frac{1}{\sqrt{2\pi R}}A_\mu^{(0)}(x)+\sum_{n=1}^\infty \frac{1}{\sqrt{\pi R}}A_\mu^{(n)}(x)\cos(\frac{ny}{R})
+\end{equation*}
+\begin{equation}
+    A_5(x,y)=\sum_{n=1}^\infty \frac{1}{\sqrt{\pi R}}A_\mu^{(n)}(x)\sin(\frac{ny}{R})
+\end{equation}
+
+For a U(1) gauge theory the kinetic part of the Lagrangian then becomes:
+
+\begin{equation*}
+    \mathcal{L}_{guage}=\int_0^{2\pi R}dy-\frac{1}{4}(\partial_MA_N-\partial_NA_M)(\partial^MA^N-\partial^NA^M)
+\end{equation*}
+\begin{equation*}
+    =-\frac{1}{4}\sum_{n=0}^\infty (\partial_\mu A^{(n)}_\nu-\partial_\nu A^{(n)}_\mu)(\partial^\mu A^{(n)\nu}-\partial^\nu A^{(n)\mu})
+\end{equation*}
+\begin{equation}
+  -\frac{1}{4}\sum_{n=1}^\infty (\partial_\mu A^{(n)}_5+\frac{n}{R} A^{(n)}_\mu)(\partial^\mu A^{(n)5}-\frac{n}{R}A^{(n)\mu})
+\end{equation}
+This result also holds for the kinetic terms in other gauge theories.
+
+A mass-less vector in 5D has 3 degrees of freedom, which is the same as a 4D massive vector. Meaning that there are no degrees of freedom left for the scalar $A_5$ which means that it should not be considered a physical field. which can also be seen by the fact they can be removed from the Lagrangian by the gauge fixing condition $\theta=-\frac{R}{n}A_5$.
+We can therefore interpret it as the Goldstone Boson that's eaten by the KK-modes to give them the mass-term. This gives us a for a mechanism of of giving a gauge-field a mass-term which is independent of the Higgs mechanism.
+
+\subsection{Fermions}
+
+Before specializing to 5D UED lets look at spinors in d dimensions. As in the 4D case the Dirac matrecies are defind by the Clifford algebra: 
+\begin{equation}
+    \{\Gamma^M,\Gamma^N\}=2g^{MN}
+    \label{cliff}
+\end{equation}
+
+In the case where d is we can use $2^{\frac{d}{2}}\cross 2^{\frac{d}{2}}$ matrices constructed the following way: 
+\begin{equation}
+    \Gamma^{0}=\begin{pmatrix}
+    0 & 1 \\
+    1 &0 
+    \end{pmatrix} \text{  ,  } \Gamma^{i+1}=\begin{pmatrix}0 & -i\gamma^i \\ i \gamma^i & 0 \end{pmatrix} , i=0,1,...,d-2
+\end{equation}
+
+where $\gamma^i$ are the Dirac matrices in d-1 dimensions. For odd d take the Dirac matrecies and add 
+\begin{equation}
+    \Gamma=i^{\frac{d-1}{2}}\Gamma^0\Gamma^1...\Gamma^{d-2}
+    \label{gammaodd}
+\end{equation}
+This method gives the Dirac matrices in any dimension starting from for example the 3D representation  $\gamma^0=\sigma^1$ $\gamma^1=i\sigma^2$ $\gamma^2=i\sigma^3$ $\sigma^i$ being the  Pauli matrices probably defined somewhere.
+
+We now have a set of d Dirac matrices which can be used to construct a set of matrices:
+\begin{equation}
+    \Sigma^{MN}=\frac{i}{4}[\Gamma^M,\Gamma^N]
+\end{equation}
+Which satisfy the Lorentz algebra:
+\begin{equation}
+    [\Sigma^{MN},\Sigma^{RS}]=i(g^{NR}\Sigma^{MS}-g^{MR}\Sigma^{NS}+g^{MS}\Sigma^{NR}-g^{NS}\Sigma^{MS})
+\end{equation}
+
+The Dirac representaion is then the vector space spanned by spinors $s=(s_0,s_1,...,s_{\lfloor\frac{d}{2}\rfloor})$ where $s_a$ are the eigenvalues  of
+\begin{equation}
+    S_a=\Gamma^{a+}\Gamma^{a-}-\frac{1}{2}
+\end{equation}
+Where the raising and lowering opperators are defined as:
+\begin{equation}
+    \Gamma^{0\pm}=\frac{i}{2}(\pm\Gamma^{0}+\Gamma^{1})
+\end{equation}
+\begin{equation*}
+    \Gamma^{a\pm}=\frac{i}{2}(\Gamma^{2a}\pm i\Gamma^{2a+1}) \text{ for } a=1,2,..,\left\lfloor\frac{d}{2}\right\rfloor
+\end{equation*}
+
+
+
+In odd dimensions this representation is an irreducible ($2^{\frac{d-1}{2}}$-dim) representation of the Lorentz algebra. However in even dimensions there exist a matrix Eq.\ref{gammaodd} which (anti-) commutes with every ($\Gamma^M$) $\Sigma^{MN}$, hence eigenvectors of $\Gamma$ with different eigenvalues do not mix under Lorentz-transformations. The ($2^{\frac{d}{2}}$-dim) Dirac representation can be reduced to two distinct ($2^{\frac{d}{2}-1}$-dim) Weyl representations which only act on the subspace corresponding to the chirality  $\Gamma s=\pm s$. 
+We can construct projection operators:
+\begin{equation}
+   P_{R/L}=\frac{1}{2}(1\pm \Gamma)
+\end{equation}
+
+Which allows us to project out chiral states  $P_{R/L}\psi=\psi_{R/L}$.
+
+Let us now specialize to 5D where can take the ususal 4D Dirac matrices and add the usual chirality opperator:
+\begin{equation}
+    \gamma^5=i\gamma^0\gamma^1\gamma^2\gamma^3
+\end{equation}
+as the fifth Dirac matrix. Strictly speaking we should use $\Gamma^5=i\gamma^5$ as \ref{cliff} implies $(\Gamma^5)^2=-1$ where as the usual 4D chirality opperator squares to 1, from now on $\Gamma$ will denote a 5D Dirac matrix where as $\gamma$ will denote a 4D one if the distinction is necessary. Under 5D Lorentz transformations right- and lefthanded spinors will mix as the chirality operator is part of the Lorentz algebra. Under 4D Lorentz transformation they do not mix and we may therefore asign different orbifold transformations to them and recover the definite chirality states in the zero-modes:  
+
+\begin{equation*}
+    \psi_d=\frac{1}{\sqrt{2\pi R}}\psi_{dL}^{(0)}+\frac{1}{\sqrt{\pi R}}\sum_{n=1}^\infty(\psi_{dL}^{(n)}\cos(\frac{ny}{R})+\psi_{sR}^{(n)}\sin(\frac{ny}{R}))
+\end{equation*}
+\begin{equation}
+    \psi_s=\frac{1}{\sqrt{2\pi R}}\psi_{sR}^{(0)}+\frac{1}{\sqrt{\pi R}}\sum_{n=1}^\infty(\psi_{sR}^{(n)}\cos(\frac{ny}{R})+\psi_{dL}^{(n)}\sin(\frac{ny}{R}))
+\end{equation}
+
+we can now integrate out the 5th dimension just like we did for gauge fields. Including a mass term from the electro-weak symmetry-breaking which will be discussed in the next section we get:
+
+\begin{equation*}
+    \mathcal{L}_{fermion}=\int_0^{2\pi R}dy i\Bar{\psi}_d\Gamma^MD_M\psi_d+i\Bar{\psi}_s\Gamma^MD_M\psi_s-m_{EW}(\Bar{\psi}_d\psi_s+\Bar{\psi}_s\psi_d)
+\end{equation*}
+
+\begin{equation}
+    =\Bar{\psi}^{(0)}(i\slashed{D}-m_{EW})\psi^{(0)}+\sum_{n=1}^\infty\Bar{\xi}_s^{(n)}(i\slashed{D}-m_n)\xi_s^{(n)}+\sum_{n=1}^\infty\Bar{\xi}_d^{(n)}(i\slashed{D}-m_n)\xi_d^{(n)}
+\end{equation}
+
+where the mass eigenstates are 
+\begin{equation*}
+ \xi_d=\psi_{d}^{(n)}\cos(\alpha^{(n)})+\psi_{s}^{(n)}\sin(\alpha^{(n)})
+\end{equation*}
+
+\begin{equation}
+  \xi_s=-\psi_{s}^{(n)}\gamma^5\cos(\alpha^{(n)})+\psi_{d}^{(n)}\gamma^5\sin(\alpha^{(n)})   
+\end{equation}
+
+with mixing angle 
+\begin{equation}
+    \tan(2\alpha)=\frac{2m_{EW}}{2\frac{n}{R}+\delta m_s+\delta m_d}
+\end{equation}
+
+
+
+\subsection{The Higgs mechanism}
+
+From the principle of gauge invariance, which can be summarized as "the laws of physics are independent of how we choose to describe them", it follows that no gauge boson or  fermion can have an explicit mass term. As SM particles do indeed have a mass we need some way of generating a massterm without violating gauge invarince. This is achived by the electroweak symmetry breaking. 
+
+The Higgs field is a complex SU(2)-doublet:
+\begin{equation}
+    \phi=\frac{1}{\sqrt{2}}\begin{pmatrix}\chi^2+i\chi^1\\
+    H-i\chi^3
+    \end{pmatrix}
+\end{equation}
+
+The 5D higgs Lagrangian is given as:
+\begin{equation}
+    \hat{\mathcal{L}}_{higgs}=(D_M\phi)^\dagger(D^M\phi)-V(\phi)
+\end{equation}
+
+With a potential:
+\begin{equation}
+    V(\phi)=-\mu^2\phi^\dagger\phi+\frac{\lambda}{2}(\phi^\dagger\phi)^2
+\end{equation}
+
+This potential has a minimum at $\abs{\phi}=v=\sqrt{\frac{\mu^2}{\lambda}}$. Making the replacement $H\rightarrow H+v$ in order to expand the field around the true vacuum, which introduces mass terms for gauge bosons.
+
+
+In order to cancel cross-terms mixing scalar and vector fields we add the gaugefixing terms to the Lagrangian\cite{bringmann2005cosmological}:
+\begin{equation}
+    \hat{\mathcal{L}}_{gaugefix}=-\frac{1}{2}\sum_i (\mathcal{G}^i)^2-\frac{1}{2}(\mathcal{G}^Y)^2
+\end{equation}
+
+\begin{equation*}
+  \mathcal{G}^i =\frac{1}{\sqrt{\xi}}(\partial^\mu A_\mu^i-\xi(-m_w\chi^i+\partial_5A_5^i))
+\end{equation*}
+
+\begin{equation}
+  \mathcal{G}^Y =\frac{1}{\sqrt{\xi}}(\partial^\mu B_\mu-\xi(s_wm_w
+  Z\chi^3+\partial_5B_5))
+\end{equation}
+
+Finally we can integrate out the 5th dimension and find the mass eigenstates to be the the usual vectors of the Glashow-Weinberg-Salam theory:
+\begin{equation*}
+    W^{\pm(n)}_\mu=\frac{1}{\sqrt{2}}(A^{(1n)}_\mu\mp iA^{2(n)}_\mu)
+\end{equation*}\begin{equation*}
+    A^{(n)}_\mu=\sin(\theta_w^{(n)})A^{3(n)}_\mu+\cos(\theta_w^{(n)})B^{(n)}_\mu
+\end{equation*}\begin{equation}
+    Z^{(n)}_\mu=\cos(\theta_w^{(n)})A_\mu^{3(n)}-\sin(\theta_w^{(n)})B^{(n)}_\mu
+\end{equation}
+
+With the weak mixing angel given by:
+\begin{equation}
+\tan(2\theta_w^{(n)})=\frac{v^2g_Yg}{\frac{1}{2}v^2(g_Y^2-g^2)+2\delta m_{B^{(n)}}
+^2-2\delta m_{A^{3(n)}}^2}
+\end{equation}
+Typically  $2\delta m_{B^{(n)}}
+^2-2\delta m_{A^{3(n)}}^2>>v^2(g_Y^2-g^2)$ meaning that the the KK-photon is well approximated by $B^{(1)}$ 
+
+And the mass eigenstates  of scalars given by:
+\begin{equation*}
+    a_0^{(n)}=\frac{n}{RM^{(n)}_{Z}}\chi^{3(n)}+\frac{m_z}{M^{(n)}_{Z}}Z_5^{(n)}
+\end{equation*}\begin{equation*}
+    G_0^{(n)}=\frac{m_z}{M^{(n)}_{Z}}\chi^{3(n)}-\frac{n}{RM^{(n)}_{Z}}Z_5^{(n)}
+\end{equation*}\begin{equation*}
+    a_\pm^{(n)}=\frac{n}{RM^{(n)}_{W}}\chi^{\pm(n)}+\frac{m_W}{M^{(n)}_{W}}W^{\pm (n)}_5
+\end{equation*}\begin{equation}
+    G_\pm^{(n)}=\frac{m_W}{M^{(n)}_{W}}\chi^{\pm(n)}-\frac{n}{RM^{(n)}_{W}}W^{\pm (n)}_5
+\end{equation}
+
+Where $M_{Z/W}^{(n)}$ is the mass of the n-th KK-mode of the Z/W boson and $m_{z/w}$ is the mass given by electroweak symmetry breaking. 
+
+The zero-modes reproduce the SM scenario. with one higgs boson $H^{(0)}$ and 3 Goldstone bosons $G_0^{(0)}=\chi^{3(0)}$ and $G_\pm^{(0)}=\chi^{\pm(0)}$. At the higher KK-levels one has 4 physical scalars $H^{(n)}, a^{(n)}_0\text{ and }a^{(n)}_\pm$ and 4 Goldstone bosons $A_5^{(n)}, G_0^{(n)}\text{ and } G^{(n)}_\pm$
+
+The Goldstone bosons can all be removed by adopting unitary gauge $\xi\rightarrow \infty$
+
+\end{document}
